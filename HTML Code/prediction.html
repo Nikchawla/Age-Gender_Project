@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <title></title>
+        <meta charset="UTF-8">
+        <link href="static/style.css" rel="stylesheet">
+    </head>
+    <body>
+        <center>
+            <div class='cont'>
+            {% if data1[0] > 0.50 %}
+           <h2>I think its a MALE</h2>          
+            {%else%}
+            <h2>I think its a FEMALE </h2>		
+			{%endif%}    			
+			{% if data2 == 0 %}
+            <h2>I dare say your AGE is between 0-2 </h2>			
+			{% elif data2 == 1 %}
+            <h2>I dare say your AGE is between 4-6 </h2>			
+			{% elif data2 == 2 %}
+            <h2>I dare say your AGE is between 8-13 </h2>			
+			{% elif data2 == 3 %}
+            <h2>I dare say your AGE is between 15-20 </h2>			
+			{% elif data2 == 4 %}
+            <h2>I dare say your AGE is between 25-32 </h2>			
+			{% elif data2 == 5 %}
+            <h2>I dare say your AGE is between 38-43 </h2>			
+			{% elif data2 == 6 %}
+            <h2>I dare say your AGE is between 48-53 </h2>			           
+            {% else %}
+            <h2>I dare say your AGE is 60+ </h2>            
+            {%endif%}			
+        </div>                  
+            <img src="{{url_for('load_img')}}" alt='img'>
+            <a href="/" class='btn'>go back</a>
+        </center>        
+    </body>
+</html>
